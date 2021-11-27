@@ -14,14 +14,25 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('services')->insert([
+            'libelleService' => 'Informatique',
+        ]);
+
+        DB::table('commissions')->insert([
+            'libelleCommission' => 'Commission bonne',
+        ]);
+
         DB::table('users')->insert([
-            'id' => 1,
             'name' => 'Admin Admin',
+            'prenomUser' => 'Triomphe',
+            'numUser' => 98729298,
             'email' => 'admin@black.com',
             'email_verified_at' => now(),
             'password' => Hash::make('secret'),
             'created_at' => now(),
-            'updated_at' => now()
+            'updated_at' => now(),
+            'service_id' => 1,
+            'commission_id' => 1
         ]);
     }
 }

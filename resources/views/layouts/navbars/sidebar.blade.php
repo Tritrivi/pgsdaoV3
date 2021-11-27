@@ -1,8 +1,8 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">{{ __('BD') }}</a>
-            <a href="#" class="simple-text logo-normal">{{ __('Black Dashboard') }}</a>
+            <a href="#" class="simple-text logo-mini">{{ __('') }}</a>
+            <a href="#" class="simple-text logo-normal">{{ __('PGSDAO') }}</a>
         </div>
         <ul class="nav">
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
@@ -26,10 +26,28 @@
                                 <p>{{ __('User Profile') }}</p>
                             </a>
                         </li>
-                        <li @if ($pageSlug == 'users') class="active " @endif>
-                            <a href="{{ route('user.index')  }}">
+                        <li @if ($pageSlug == 'personnel') class="active " @endif>
+                            <a href="{{ route('users.index')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>
-                                <p>{{ __('User Management') }}</p>
+                                <p>{{ __('Personnel') }}</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'service') class="active " @endif>
+                            <a href="{{ route('services.index')  }}">
+                                <i class="tim-icons icon-double-right"></i>
+                                <p>{{ __('Service') }}</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'commission') class="active " @endif>
+                            <a href="{{ route('commissions.index')  }}">
+                                <i class="tim-icons icon-delivery-fast"></i>
+                                <p>{{ __('Commission') }}</p>
+                            </a>
+                        </li>
+                         <li @if ($pageSlug == 'test') class="active " @endif>
+                            <a href="{{ route('test')  }}">
+                                <i class="tim-icons icon-bullet-list-67"></i>
+                                <p>{{ __('Test') }}</p>
                             </a>
                         </li>
                     </ul>
@@ -65,12 +83,12 @@
                     <p>{{ __('Typography') }}</p>
                 </a>
             </li>
-            <li @if ($pageSlug == 'rtl') class="active " @endif>
+            <!--<li @if ($pageSlug == 'rtl') class="active " @endif>
                 <a href="{{ route('pages.rtl') }}">
                     <i class="tim-icons icon-world"></i>
                     <p>{{ __('RTL Support') }}</p>
                 </a>
-            </li>
+            </li>-->
             <li class=" {{ $pageSlug == 'upgrade' ? 'active' : '' }} bg-info">
                 <a href="{{ route('pages.upgrade') }}">
                     <i class="tim-icons icon-spaceship"></i>

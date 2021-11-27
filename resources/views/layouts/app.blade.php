@@ -28,6 +28,20 @@
                     @include('layouts.navbars.navbar')
 
                     <div class="content">
+
+                    @if (session()->has('message')) 
+                    <div class="btn btn-success btn-block" role="alert">
+                    {{ session()->get('message') }}
+                    </div>
+                    @endif
+
+                    @if (session()->has('messagealert'))
+                    <div class="alert alert-danger" role="alert">
+                    {{ session()->get('messagealert') }}
+                    </div>
+                    @endif
+
+
                         @yield('content')
                     </div>
 
