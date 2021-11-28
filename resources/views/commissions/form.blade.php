@@ -26,7 +26,7 @@
                       @error('libelleCommission')
                           <div class="invalid-feedback">
                               {{ $errors->first('libelleCommission')}}
-                          </div>   
+                          </div>
                       @enderror
                       </div>
                   </div>

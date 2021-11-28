@@ -44,6 +44,12 @@
                                 <p>{{ __('Commission') }}</p>
                             </a>
                         </li>
+                        <li @if ($pageSlug == 'type_marche') class="active " @endif>
+                            <a href="{{ route('type_marches.index')  }}">
+                                <i class="tim-icons icon-delivery-fast"></i>
+                                <p>{{ __('Type Marché') }}</p>
+                            </a>
+                        </li>
                          <li @if ($pageSlug == 'test') class="active " @endif>
                             <a href="{{ route('test')  }}">
                                 <i class="tim-icons icon-bullet-list-67"></i>

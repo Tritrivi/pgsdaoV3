@@ -13,10 +13,10 @@ class CreateTypeMarchesTable extends Migration
      */
     public function up()
     {
-        Schema::create('type__marches', function (Blueprint $table) {
-            $table->id();
+        Schema::create('type_marches', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('libelleTypeMarche');
-            $table->integer('delaie');
+            $table->integer('delaieTypeMarche');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTypeMarchesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type__marches');
+        Schema::dropIfExists('type_marches');
     }
 }

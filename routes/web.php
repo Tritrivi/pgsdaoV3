@@ -47,5 +47,10 @@ Route::resource('services','App\Http\Controllers\ServiceController');
 /** route generale commission **/
 Route::resource('commissions','App\Http\Controllers\CommissionController');
 
+/**route genarale type marche */
+Route::resource('type_marches','App\Http\Controllers\TypeMarcheController');
+
 /**test**/
 Route::get('test', 'App\Http\Controllers\UserController@test')->name('test');
+
+
